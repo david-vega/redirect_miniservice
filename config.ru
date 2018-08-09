@@ -1,3 +1,1 @@
-run Proc.new do |env|
-  302, {'Location' => ENV['REMOTE_SERVER']}, []
-end
+run Proc.new { |env| [301, { 'Location' => ENV['REMOTE_SERVER'] }, StringIO.new('')] }
